@@ -1,0 +1,25 @@
+{
+  "name": "jeanbaptiste",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
+    "prettier": "^3.4.2",
+    "prettier-plugin-tailwindcss": "^0.6.10",
+    "tailwindcss": "^3.4.17",
+    "vite": "^6.0.5",
+    "vite-plugin-glsl": "^1.3.1"
+  },
+  "dependencies": {
+    "lenis": "^1.1.19",
+    "motion": "^11.18.0",
+    "three": "^0.172.0"
+  }
+}

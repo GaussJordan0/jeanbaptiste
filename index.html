@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jean-Baptiste Soumier Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  </head>
+  <body class="bg-[#F5EEDF]">
+    <!-- HERO SECTION -->
+    <main class="hero-wrapper mx-auto w-[95%] font-kingred">
+      <h1 class="hero-name text-primary">
+        <span class="text-jb-red">Jean</span>-Baptiste
+      </h1>
+      <div class="hero-family flex gap-2">
+        <div
+          class="emblem mt-[4vw] self-center px-[0.5rem] py-[0.2rem] font-cocomatUltralight lg:mt-[3vw] lg:px-[1rem] lg:py-[0.4rem]"
+        >
+          copywriter
+        </div>
+        <h1 class="text-primary">Soumier</h1>
+      </div>
+      <div class="hero-image relative opacity-0">
+        <img src="/images/jeanbaptiste.jpg" alt="Jean-Baptiste image" />
+      </div>
+      <p class="hero-intro hero-details font-cocomatLight">
+        <span>Hi. Welcome.</span><br />
+        Here’s a collection of my work in advertising. Including films, behind
+        the scenes, prints, activations, pictures, ideas, and much more. 
+        Actually, there’s not much more. I just love overpromising.
+      </p>
+    </main>
+
+    <!-- MICHELIN GUIDE SECTION -->
+    <section class="">
+      <div class="sticky top-0 z-10 grid grid-cols-12 bg-[#F5EEDF] pt-5">
+        <!-- Header -->
+        <div
+          class="tertiary-text col-span-full mx-auto flex w-[90%] items-center justify-end gap-4 md:gap-8 lg:gap-12 xl:gap-14 2xl:gap-20"
+        >
+          <div class="flex items-center gap-2">
+            <div class="aspect-square h-[7px] w-[7px] bg-black"></div>
+            <span class="font-cocomatLight">UK MARKET</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="aspect-square h-[7px] w-[7px] bg-black"></div>
+            <span class="font-cocomatLight">FILM</span>
+          </div>
+        </div>
+        <!-- Title -->
+        <div
+          class="col-span-full mx-auto grid w-[90%] grid-cols-12 font-kingred"
+        >
+          <h1
+            class="primary-text col-span-full justify-self-end lg:pb-4 lg:text-7xl xl:text-8xl"
+          >
+            MICHELIN GUIDE
+          </h1>
+          <hr class="col-span-full border-4 border-jb-red 2xl:border-[5px]" />
+        </div>
+      </div>
+
+      <!-- Subtitle -->
+      <div
+        class="secondary-text mx-auto mt-8 w-[90%] grid-cols-6 font-cocomatLight lg:grid"
+      >
+        <span class="col-span-full col-start-1">
+          The famous Michelin Guide wanted to announce its brand new hotel
+          section.
+        </span>
+        <span class="col-span-full">
+          We thought people could get
+          <span class="bg-jb-red text-[#F5EEDF]">confused.</span>
+        </span>
+      </div>
+
+      <!-- Video -->
+<div class="mx-auto w-[70%] overflow-hidden mt-[10%] h-auto">
+  <video 
+    id="previewVideo"
+    src="/videos/michelin.mp4"
+    data-src="https://player.vimeo.com/video/1044826919"
+    class="video-trailer cursor-pointer rounded-xl w-full h-full" 
+    muted
+    autoplay
+    loop
+    playsinline
+
+  ></video>
+</div>
+
+
+    </section>
+
+    <!-- ADDITIONAL CONTENT -->
+    <div class="flex h-[200vh] items-center justify-center">
+      <div class="h-[700px] w-[500px] rounded-xl opacity-0">
+        <img src="/images/jeanbaptiste.jpg" alt="" />
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+    <canvas class="webgl"></canvas>
+  </body>
+</html>

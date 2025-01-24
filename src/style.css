@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .primary-text {
+    font-size: clamp(1.5rem, calc(0.5rem + 8.5vw), 100rem);
+  }
+  .secondary-text {
+    font-size: clamp(0.9rem, calc(0.5rem + 1.5vw), 2.2rem);
+  }
+  .tertiary-text {
+    font-size: clamp(0.6rem, calc(0.2rem + 1vw), 1rem);
+  }
+}
+/* consolelog */
+/* *, html{
+  border: 1px solid black;
+} */
+:root {
+  --color-red: theme("colors.jb-red");
+}
+
+@font-face {
+  font-family: "kingred";
+  src: url("/fonts/kingred.otf");
+}
+@font-face {
+  font-family: "CocomatLight";
+  src: url("/fonts/CocomatLight.ttf");
+}
+@font-face {
+  font-family: "CocomatUltralight";
+  src: url("/fonts/CocomatUltralight.ttf");
+}
+body {
+  /* cursor: none */
+}
+.cursor {
+  position: fixed;
+  height: 12px;
+  width: 12px;
+  background: var(--color-red);
+  pointer-events: none;
+  z-index: 9999;
+  color: white;
+  font-family: "kingred";
+  text-align: center;
+  font-size: 0.85rem;
+
+}
+.cursor.active{
+  height: 25px;
+  width: 100px;
+
+}
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.hero-wrapper {
+  display: grid;
+  /* grid-gap: 0.5rem; */
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  height: 100vh;
+}
+.hero-name {
+  grid-area: 2/1/3/6;
+  justify-self: end;
+  align-self: end;
+}
+.hero-family {
+  grid-area: 3/1/4/6;
+  justify-self: end;
+  align-self: start;
+}
+.text-primary {
+  font-size: clamp(2rem, calc(7vw + 1.2rem), 100rem);
+}
+
+.emblem {
+  grid-area: 2/1/3/3;
+  font-size: clamp(0.1rem, calc(0.5rem + 1vw), 100rem);
+  border: 2px solid var(--color-red);
+  border-radius: 3rem;
+  text-align: center;
+  opacity: 0.7;
+}
+.hero-intro {
+  grid-area: 4/1/6/6;
+}
+.hero-image {
+  display: relative;
+  grid-area: 5/1/10/7;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+.hero-image > img {
+  mask-image: url("/images/square.svg");
+  -webkit-mask-image: url("/images/square.svg");
+
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+
+  mask-position: center;
+  -webkit-mask-position: center;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 100% 25%;
+}
+.hero-details {
+  font-size: clamp(0.65rem, 2.5vw, 2rem);
+  opacity: 0.9;
+}
+.circle {
+  height: 2rem;
+  width: 2rem;
+  background-color: black;
+  color: white;
+  font-size: 0.5rem;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+/* HANDLING MEDIA QUERIES  */
+@media (min-width: 768px) {
+  .hero-name {
+    grid-area: 2/1/3/5;
+  }
+  .hero-family {
+    grid-area: 3/1/4/5;
+  }
+
+  .hero-image > img {
+    object-position: 100% 25%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-title {
+    font-size: 7vw;
+  }
+  .hero-name {
+    grid-area: 4/1/5/4;
+  }
+  .hero-details {
+    grid-area: 7/1/8/4;
+  }
+  .hero-family {
+    grid-area: 5/1/6/4;
+  }
+  .hero-image {
+    grid-area: 3/4/9/7;
+  }
+  .hero-image > img {
+    object-position: 0% 25%;
+  }
+}

@@ -8,29 +8,25 @@
   </head>
   <body class="bg-[#F5EEDF]">
     <!-- HERO SECTION -->
-    <main class="hero-wrapper mx-auto w-[95%] font-kingred">
-      <h1 class="hero-name text-primary">
-        <span class="text-jb-red">Jean</span>-Baptiste
-      </h1>
-      <div class="hero-family flex gap-2">
-        <div
-          class="emblem mt-[4vw] self-center px-[0.5rem] py-[0.2rem] font-cocomatUltralight lg:mt-[3vw] lg:px-[1rem] lg:py-[0.4rem]"
-        >
-          copywriter
+    <main class="mx-auto w-[90%] grid grid-cols-2 mt-[5%] leading-[1] h-[100vh]">
+      <div class="flex w-fit flex-col items-end">
+        <div class="primary-text font-kingred">Jean-Baptiste</div>
+        <div class="flex items-center gap-4">
+          <div
+            class="secondary-text rounded-3xl border-4 border-jb-red px-4 font-cocomatUltralight"
+          >
+            copywriter
+          </div>
+          <div class="primary-text font-kingred">Soumier</div>
         </div>
-        <h1 class="text-primary">Soumier</h1>
+        <div>Hi. Welcome.  Here’s a collection of my work in advertising. Including films, behind the scene, prints, activation, pictures, ideas and much more.  Actually, there’s not much more. I just love overpromising.</div>
       </div>
-      <div class="hero-image relative opacity-0">
-        <img src="/images/jeanbaptiste.jpg" alt="Jean-Baptiste image" />
-      </div>
-      <p class="hero-intro hero-details font-cocomatLight">
-        <span>Hi. Welcome.</span><br />
-        Here’s a collection of my work in advertising. Including films, behind
-        the scenes, prints, activations, pictures, ideas, and much more. 
-        Actually, there’s not much more. I just love overpromising.
-      </p>
-    </main>
+      <div class="aspect-[11/16] max-w-[300px] h-auto self-center justify-self-center">
+        <img src="/images/jeanbaptiste.jpg" alt="jeanbaptiste"
+        class="h-full w-full object-cover opacity-0">
 
+      </div>
+    </main>
     <!-- MICHELIN GUIDE SECTION -->
     <section class="">
       <div class="sticky top-0 z-10 grid grid-cols-12 bg-[#F5EEDF] pt-5">
@@ -75,21 +71,18 @@
       </div>
 
       <!-- Video -->
-<div class="mx-auto w-[70%] overflow-hidden mt-[10%] h-auto">
-  <video 
-    id="previewVideo"
-    src="/videos/michelin.mp4"
-    data-src="https://player.vimeo.com/video/1044826919"
-    class="video-trailer cursor-pointer rounded-xl w-full h-full" 
-    muted
-    autoplay
-    loop
-    playsinline
-
-  ></video>
-</div>
-
-
+      <div class="mx-auto mt-[10%] h-auto w-[70%] overflow-hidden">
+        <video
+          id="previewVideo"
+          src="/videos/michelin.mp4"
+          data-src="https://player.vimeo.com/video/1044826919"
+          class="video-trailer h-full w-full cursor-pointer rounded-xl"
+          muted
+          autoplay
+          loop
+          playsinline
+        ></video>
+      </div>
     </section>
 
     <!-- ADDITIONAL CONTENT -->

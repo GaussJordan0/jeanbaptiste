@@ -6,5 +6,5 @@ export default defineConfig({
         host: true,
         open: true
     },
-  plugins: [glsl()]
+  plugins: [glsl(  {include: [/\.glsl$/]})]
 });

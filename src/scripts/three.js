@@ -1,6 +1,6 @@
 import * as THREE from "three";
-import vertexShader from "./shaders/vertexshader.glsl";
-import fragmentShader from "./shaders/fragmentshader.glsl";
+import vertexShader from "./vertexshader.glsl";
+import fragmentShader from "./fragmentshader.glsl";
 import { animate } from "motion";
 
 window.addEventListener("DOMContentLoaded", () => {

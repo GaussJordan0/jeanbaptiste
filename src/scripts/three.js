@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import vertexShader from "./shaders/vertexshader.glsl?raw";
+import vertexShader from "./shaders/vertexshader.glsl";
 import fragmentShader from "./shaders/fragmentshader.glsl";
 import { animate } from "motion";
 

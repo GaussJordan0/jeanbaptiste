@@ -1,6 +1,6 @@
 import { animate, stagger } from "motion";
 
-const texts = document.querySelectorAll('.primary-text');
+const texts = document.querySelectorAll('h1');
 
 texts.forEach((text) => {
   // Split text into characters and wrap in spans

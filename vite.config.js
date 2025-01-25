@@ -1,14 +1,18 @@
+// vite.config.js
 import glsl from 'vite-plugin-glsl';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  resolve: {
-    extensions: ['.js', '.glsl'] // Add this
-  },
-    server: {
-        host: true,
-        open: true
-    },
   plugins: [glsl()],
-  assetsInclude: ['**/*.glsl'] // Add this line
+  build: {
+    // Required for Vercel deployment
+    rollupOptions: {
+      external: ['three', 'motion'] // Add any other external deps here
+    }
+  },
+  resolve: {
+    // Explicitly list extensions Vite should resolve
+    extensions: ['.js', '.glsl']
+  },
+  assetsInclude: ['**/*.glsl']
 });

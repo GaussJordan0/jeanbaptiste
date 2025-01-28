@@ -1,9 +1,10 @@
 const videos = document.querySelectorAll('.video-trailer')
-let currentModal = null;
 
+let currentModal = null;
+const cursor = document.querySelector(".cursor");
 videos.forEach((video) => {
   video.addEventListener('click', () => {
-
+    cursor.style.opacity =0;
     if (currentModal) {
       currentModal.remove();
       currentModal = null;
@@ -30,10 +31,12 @@ videos.forEach((video) => {
     currentModal = modal;
 
     const closeModal = () => {
+      cursor.style.opacity =1;
       modal.remove();
       currentModal = null;
     };
     modal.addEventListener('click', (e) => {
+
         closeModal();
     });
 

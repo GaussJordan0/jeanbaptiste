@@ -34,17 +34,15 @@
   src: url("/fonts/CocomatUltralight.ttf");
 }
 
-.writing-mode {
-  writing-mode: vertical-rl;
-}
+
 .cursor {
   position: fixed;
   height: 12px;
   width: 12px;
-  background: var(--color-red);
+  background: white;
   pointer-events: none;
   z-index: 9999;
-  color: white;
+  color: #090979;
   font-family: "kingred";
   text-align: center;
   font-size: 0.85rem;
@@ -207,13 +205,13 @@ video {
 /* For Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #ccc #f1f1f1;
+  scrollbar-color: white #090979;
 }
 
 
 ::selection {
-  background-color: var(--color-red); /* Highlight background color */
-  color: white; /* Highlighted text color */
+  background-color: white; /* Highlight background color */
+  color: #090979; /* Highlighted text color */
 }
 
 /* For Firefox */

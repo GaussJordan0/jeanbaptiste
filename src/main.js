@@ -2,7 +2,7 @@ import "./style.css";
 import "./scripts/three";
 import "./scripts/mouse";
 import "./scripts/iframes";
-import "./scripts/primarytext";
+import "./scripts/animations";
 
 // import { animate, scroll } from "motion";
 import Lenis from "lenis";

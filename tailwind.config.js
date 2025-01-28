@@ -12,7 +12,9 @@ export default {
         'cocomatUltralight': ['CocomatUltralight', 'sans-serif']
     },
     colors:{
-      'jb-red': '#91050E'
+      'jb-red': '#91050E',
+      'jb-yellow' : '#e4bb0f',
+      'jb-blue': '#090979',
     }
   },
   plugins: [],

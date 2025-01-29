@@ -207,12 +207,12 @@ video {
 /* For Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--color-yellow) var(--color-blue);
+  scrollbar-color: var(--color-yellow) transparent;
 }
 
 
 ::selection {
-  background-color: white; /* Highlight background color */
+  background-color: var(--color-yellow); /* Highlight background color */
   color: #090979; /* Highlighted text color */
 }
 

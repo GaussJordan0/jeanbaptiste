@@ -1,6 +1,14 @@
-import { animate, stagger, inView } from "motion";
+import { animate, stagger, inView, delay } from "motion";
 
 const texts = document.querySelectorAll("h1");
+const reveals = document.querySelectorAll(".citroen, hr");
+
+reveals.forEach((reveal) => {
+  inView(reveal, () => {
+    animate(reveal, { opacity: [0, 1] }, { duration: 0.7 }, delay(0.5));
+  });
+}); 
+
 
 texts.forEach((text) => {
   // Split text into characters and wrap in spans

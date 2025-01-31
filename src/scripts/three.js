@@ -60,7 +60,7 @@ window.addEventListener("DOMContentLoaded", () => {
       });
       image.addEventListener("mouseenter", () => {
         animate(1, 0, {
-          duration: 0.7,
+          duration: 0.5,
           onUpdate: (value) => {
             material.uniforms.uHoverState.value = value;
           },
@@ -68,7 +68,7 @@ window.addEventListener("DOMContentLoaded", () => {
       });
       image.addEventListener("mouseleave", () => {
         animate(0, 1, {
-          duration: 0.7,
+          duration: 0.5,
           onUpdate: (value) => {
             material.uniforms.uHoverState.value = value;
           },

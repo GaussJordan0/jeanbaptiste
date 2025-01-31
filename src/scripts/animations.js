@@ -1,4 +1,4 @@
-import { animate, stagger, inView, delay } from "motion";
+import { animate, stagger, inView, delay, scroll } from "motion";
 
 const texts = document.querySelectorAll("h1");
 const reveals = document.querySelectorAll(".citroen, hr");
@@ -106,3 +106,7 @@ inView(
   },
   { amount: 0.5 },
 );
+
+// scroll(".footertext",{
+//   a
+//   target: ".footer-container",})

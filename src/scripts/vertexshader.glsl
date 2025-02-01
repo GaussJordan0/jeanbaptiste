@@ -12,9 +12,9 @@ void main () {
   float speed =3.;
  vec3 newposition = position;
 
- newposition.x +=  uHoverState * 10.*sin( (uv.x  + uTime /speed ) *frequency);
+//  newposition.x +=  uHoverState * 10.*sin( (uv.x  + uTime /speed ) *frequency);
 newposition.z +=  uHoverState * 1.5*sin( (uv.x  + uTime /speed) *frequency *10.);
-newposition.z +=  -uHoverState * 0.5*sin( (uv.y   + uTime /speed) *frequency ); 
+newposition.z +=  -uHoverState * 0.5*cos( (uv.y   + uTime /speed) *frequency*10. ); 
 
 vUv = uv;
   gl_Position = projectionMatrix * modelViewMatrix * vec4( newposition, 1.0 );

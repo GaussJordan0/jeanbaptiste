@@ -107,6 +107,7 @@ inView(
   { amount: 0.5 },
 );
 
-// scroll(".footertext",{
-//   a
-//   target: ".footer-container",})
+// scroll(".footertext", {
+//   target: ".footer-container",}
+
+// );

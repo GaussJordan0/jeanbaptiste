@@ -30,39 +30,11 @@ texts.forEach((text) => {
   });
 });
 
-const ps = document.querySelectorAll("p");
 
-ps.forEach((text) => {
-  // Split text into characters and wrap in spans
-  const chars = text.textContent.split("").map((char) => {
-    const span = document.createElement("span");
-    span.textContent = char;
-    return span;
-  });
-
-  // Clear original text and add wrapped chars
-  text.textContent = "";
-  chars.forEach((span) => text.appendChild(span));
-
-  // Animate the spans
-  inView(text, () => {
-    animate(
-      chars,
-      {
-        opacity: [0, 1],
-        filter: ["blur(10px)", "blur(0px)"],
-      },
-      {
-        delay: stagger(0.1), // Correct stagger usage
-        duration: 0.8,
-      },
-    );
-  });
-});
 
 const observerTrigger = document.querySelector("#observer-trigger");
 const body = document.querySelector("body");
-const observerbody = document.querySelector(".observerbody");
+const observerbody = document.querySelectorAll(".observerbody");
 const observerSquare = document.querySelectorAll("#square");
 const subtitle = document.querySelector("#subtitle");
 
@@ -71,12 +43,15 @@ inView(
   () => {
     body.style.backgroundColor = "var(--color-blue)";
     body.style.transition = "background-color 0.5s ease-in-out";
-    observerbody.style.color = "white";
     subtitle.style.color = "white";
     subtitle.style.transition = "color 0.5s ease-in-out";
-    observerbody.style.transition = "color 0.5s ease-in-out";
-    observerbody.style.backgroundColor = "var(--color-blue)";
-    observerbody.style.transition = "background-color 0.5s ease-in-out";
+    observerbody.forEach((observerbody) => {
+      
+      observerbody.style.color = "white";
+      observerbody.style.transition = "color 0.5s ease-in-out";
+      observerbody.style.backgroundColor = "var(--color-blue)";
+      observerbody.style.transition = "background-color 0.5s ease-in-out";
+    })
     observerSquare.forEach((square) => {
       square.style.backgroundColor = "var(--color-yellow)";
       square.style.transition = "background-color 0.5s ease-in-out";
@@ -84,10 +59,13 @@ inView(
     return () => {
       body.style.backgroundColor = "white";
       body.style.transition = "background-color 0.5s ease-in-out";
-      observerbody.style.color = "var(--color-blue)";
-      observerbody.style.transition = "color 0.5s ease-in-out";
-      observerbody.style.backgroundColor = "white";
-      observerbody.style.transition = "background-color 0.5s ease-in-out";
+      observerbody.forEach((observerbody) => {
+        
+        observerbody.style.color = "var(--color-blue)";
+        observerbody.style.transition = "color 0.5s ease-in-out";
+        observerbody.style.backgroundColor = "white";
+        observerbody.style.transition = "background-color 0.5s ease-in-out";
+      })
       observerSquare.forEach((square) => {
         square.style.backgroundColor = "var(--color-blue)";
         square.style.transition = "background-color 0.5s ease-in-out";
@@ -121,3 +99,54 @@ if(  window.innerWidth < 768){
   });
 }
 
+
+const images = document.querySelectorAll("img, video");
+
+images.forEach((image) => {
+  inView(image, () => {
+    animate(
+      image,
+      {
+        filter: ["blur(10px)", "blur(0px)"],
+        
+      },
+      {
+        duration: 1.0,
+      },
+    );
+  });
+})
+
+const hrs = document.querySelectorAll("hr");
+
+hrs.forEach((hr) => {
+  inView(hr, () => {
+    animate(
+      hr,
+      {
+        clipPath: ["inset(0 100% 0 0)", "inset(0 0 0 0)"],
+      },
+      {
+        duration: .4  ,
+      },
+    );
+  });
+})
+
+
+const ps = document.querySelectorAll("p");
+
+ps.forEach((p) => {
+  inView(p, () => {
+    animate(
+      p,
+      {
+        filter: ["blur(10px)", "blur(0px)"],
+        opacity: [0,1]
+      },
+      {
+        duration: 0.7  ,
+      },
+    );
+  });
+})

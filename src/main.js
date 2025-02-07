@@ -9,7 +9,7 @@ import Lenis from "lenis";
 
 const lenis = new Lenis({
   autoRaf: true,
-  lerp: 0.05,
+  lerp: 0.1,
 });
 
 // const body = document.querySelector("body");
@@ -21,3 +21,5 @@ const lenis = new Lenis({
 // body.style.color = entries[0].isIntersecting ? "#090979" : "white";
 // }, {threshold: 0.4,})
 // observer.observe(trigger)
+
+

@@ -1,14 +1,6 @@
-import { animate, stagger, inView, delay, scroll } from "motion";
+import { animate, stagger, inView, scroll } from "motion";
 
 const texts = document.querySelectorAll("h1");
-const reveals = document.querySelectorAll(".citroen, hr");
-
-reveals.forEach((reveal) => {
-  inView(reveal, () => {
-    animate(reveal, { opacity: [0, 1] }, { duration: 0.7 }, delay(0.5));
-  });
-}); 
-
 
 texts.forEach((text) => {
   // Split text into characters and wrap in spans
@@ -61,8 +53,8 @@ ps.forEach((text) => {
         filter: ["blur(10px)", "blur(0px)"],
       },
       {
-        delay: stagger(0.005), // Correct stagger usage
-        duration: 0.3,
+        delay: stagger(0.1), // Correct stagger usage
+        duration: 0.8,
       },
     );
   });
@@ -107,7 +99,25 @@ inView(
   { amount: 0.5 },
 );
 
-// scroll(".footertext", {
-//   target: ".footer-container",}
+const footertext = document.querySelectorAll(".footer-text");
+const footerContainer = document.querySelector(".footer-container");
 
-// );
+const animation = animate (footertext, { y:[1000, 0]})
+
+if(  window.innerWidth < 768){
+
+  scroll(animation, { 
+    target: footerContainer, 
+    offset: ["0 1", "1 0"]
+  
+    
+  });
+}else {
+  scroll(animation, { 
+    target: footerContainer, 
+    offset: ["0 1", "0.75 0"]
+  
+    
+  });
+}
+

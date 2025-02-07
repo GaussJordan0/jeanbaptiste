@@ -3,6 +3,9 @@ import vertexShader from "./vertexshader.glsl";
 import fragmentShader from "./fragmentshader.glsl";
 import { animate } from "motion";
 
+
+
+
 window.addEventListener("DOMContentLoaded", () => {
   const canvas = document.querySelector("canvas.webgl");
   const images = [...document.querySelectorAll("#shaders")];

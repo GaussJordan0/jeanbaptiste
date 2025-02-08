@@ -23,8 +23,8 @@ texts.forEach((text) => {
         filter: ["blur(10px)", "blur(0px)"],
       },
       {
-        delay: stagger(0.02), // Correct stagger usage
-        duration: 0.3,
+        delay: stagger(0.03), // Correct stagger usage
+        duration: 0.5,
       },
     );
   });
@@ -77,45 +77,47 @@ inView(
   { amount: 0.5 },
 );
 
-const footertext = document.querySelectorAll(".footer-text");
-const footerContainer = document.querySelector(".footer-container");
+// const footertext = document.querySelectorAll(".footer-text");
+// const footerContainer = document.querySelector(".footer-container");
 
-const animation = animate (footertext, { y:[1000, 0]})
+// const animation = animate (footertext, { y:[1000, 0]})
 
-if(  window.innerWidth < 768){
+// if(  window.innerWidth < 768){
 
-  scroll(animation, { 
-    target: footerContainer, 
-    offset: ["0 1", "1 0"]
+//   scroll(animation, { 
+//     target: footerContainer, 
+//     offset: ["0 1", "1 0"]
   
     
-  });
-}else {
-  scroll(animation, { 
-    target: footerContainer, 
-    offset: ["0 1", "0.75 0"]
+//   });
+// }else {
+//   scroll(animation, { 
+//     target: footerContainer, 
+//     offset: ["0 1", "0.75 0"]
   
     
-  });
-}
+//   });
+// }
 
 
-const images = document.querySelectorAll("img, video");
+const images = document.querySelectorAll("img");
 
 images.forEach((image) => {
   inView(image, () => {
     animate(
       image,
       {
-        filter: ["blur(10px)", "blur(0px)"],
+        filter: ["blur(30px)", "blur(0px)"],
         
       },
       {
-        duration: 1.0,
+        duration: 0.3,
+        delay: 0.3
       },
     );
   });
 })
+
 
 const hrs = document.querySelectorAll("hr");
 
@@ -127,7 +129,7 @@ hrs.forEach((hr) => {
         clipPath: ["inset(0 100% 0 0)", "inset(0 0 0 0)"],
       },
       {
-        duration: .4  ,
+        duration: .7 ,
       },
     );
   });
@@ -150,3 +152,13 @@ ps.forEach((p) => {
     );
   });
 })
+
+
+const resumeLinks = document.querySelectorAll("#resume");
+
+resumeLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.open("/resume.pdf", "_blank");
+  });
+});

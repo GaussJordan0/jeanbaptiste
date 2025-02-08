@@ -2,13 +2,27 @@ import * as THREE from "three";
 import vertexShader from "./vertexshader.glsl";
 import fragmentShader from "./fragmentshader.glsl";
 import { animate } from "motion";
+import imagesLoaded from "imagesloaded";
+import FontFaceObserver from "fontfaceobserver";
 
+const kingred = new Promise((resolve, reject) => {
+  new FontFaceObserver("kingred").load().then(resolve);
+})
+const CocomatLight = new Promise((resolve, reject) => {
+  new FontFaceObserver("CocomatLight").load().then(resolve);
+})
+const CocomatUltralight = new Promise((resolve, reject) => {
+  new FontFaceObserver("CocomatUltralight").load().then(resolve);
+})
+const images = [...document.querySelectorAll("#shaders")];
+const preloadIoadImages = new Promise((resolve, reject) => {
+  imagesLoaded(images, { background: true }, resolve);
+})
 
+let allDone =[kingred, CocomatLight, CocomatUltralight, preloadIoadImages]
+Promise.all(allDone).then(() => {
 
-
-window.addEventListener("DOMContentLoaded", () => {
   const canvas = document.querySelector("canvas.webgl");
-  const images = [...document.querySelectorAll("#shaders")];
   const sizes = {
     width: window.innerWidth,
     height: window.innerHeight,
@@ -161,4 +175,6 @@ window.addEventListener("DOMContentLoaded", () => {
     updateImagesPosition();
   });
   createImages();
-});
+  
+})
+

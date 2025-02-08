@@ -14,9 +14,9 @@
   }
 }
 /* consolelog */
-/* *, html{
-  border: 1px solid black;
-} */
+*, html{
+ scroll-behavior: smooth;
+}
 :root {
   --color-red: theme("colors.jb-red");
   --color-yellow: theme("colors.jb-yellow");

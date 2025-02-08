@@ -7,21 +7,20 @@ import FontFaceObserver from "fontfaceobserver";
 
 const kingred = new Promise((resolve, reject) => {
   new FontFaceObserver("kingred").load().then(resolve);
-})
+});
 const CocomatLight = new Promise((resolve, reject) => {
   new FontFaceObserver("CocomatLight").load().then(resolve);
-})
+});
 const CocomatUltralight = new Promise((resolve, reject) => {
   new FontFaceObserver("CocomatUltralight").load().then(resolve);
-})
+});
 const images = [...document.querySelectorAll("#shaders")];
 const preloadIoadImages = new Promise((resolve, reject) => {
   imagesLoaded(images, { background: true }, resolve);
-})
+});
 
-let allDone =[kingred, CocomatLight, CocomatUltralight, preloadIoadImages]
+let allDone = [kingred, CocomatLight, CocomatUltralight, preloadIoadImages];
 Promise.all(allDone).then(() => {
-
   const canvas = document.querySelector("canvas.webgl");
   const sizes = {
     width: window.innerWidth,
@@ -175,6 +174,4 @@ Promise.all(allDone).then(() => {
     updateImagesPosition();
   });
   createImages();
-  
-})
-
+});

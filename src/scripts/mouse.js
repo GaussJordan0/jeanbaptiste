@@ -5,9 +5,13 @@ let mouseY = window.innerHeight / 2;
 let offsetWidth = 6;
 let offsetheight = 6;
 
+const isTouchScreen = navigator.maxTouchPoints > 0;
 const cursor = document.createElement("div");
 cursor.classList.add("cursor");
-document.body.appendChild(cursor);
+if (!isTouchScreen) {
+  document.body.appendChild(cursor);
+  
+}
 
 document.addEventListener("mousemove", (e) => {
   mouseX = e.clientX;
@@ -83,3 +87,4 @@ const tick = () => {
   window.requestAnimationFrame(tick);
 };
 tick();
+

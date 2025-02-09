@@ -6,11 +6,12 @@ let offsetWidth = 6;
 let offsetheight = 6;
 
 const isTouchScreen = navigator.maxTouchPoints > 0;
+
 const cursor = document.createElement("div");
 cursor.classList.add("cursor");
-if (!isTouchScreen) {
-  document.body.appendChild(cursor);
-  
+document.body.appendChild(cursor);
+if (isTouchScreen) {
+  cursor.style.display = "none";
 }
 
 document.addEventListener("mousemove", (e) => {
